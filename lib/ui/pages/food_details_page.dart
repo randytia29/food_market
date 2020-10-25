@@ -156,7 +156,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                             margin: EdgeInsets.fromLTRB(0, 14, 0, 16),
                             child: Text(
                               widget.transaction.food.description,
-                              style: greyFontSytle,
+                              style: greyFontStyle,
                             ),
                           ),
                           Text(
@@ -167,7 +167,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                             margin: EdgeInsets.fromLTRB(0, 4, 0, 41),
                             child: Text(
                               widget.transaction.food.ingredients,
-                              style: greyFontSytle,
+                              style: greyFontStyle,
                             ),
                           ),
                           Row(
@@ -178,7 +178,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                                 children: [
                                   Text(
                                     'Total Price',
-                                    style: greyFontSytle.copyWith(fontSize: 13),
+                                    style: greyFontStyle.copyWith(fontSize: 13),
                                   ),
                                   Text(
                                     NumberFormat.currency(

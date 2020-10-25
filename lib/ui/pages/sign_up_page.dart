@@ -58,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
               controller: nameController,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintStyle: greyFontSytle,
+                  hintStyle: greyFontStyle,
                   hintText: 'Type your full name'),
             ),
           ),
@@ -81,7 +81,7 @@ class _SignUpPageState extends State<SignUpPage> {
               controller: emailController,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintStyle: greyFontSytle,
+                  hintStyle: greyFontStyle,
                   hintText: 'Type your email address'),
             ),
           ),
@@ -104,7 +104,7 @@ class _SignUpPageState extends State<SignUpPage> {
               controller: passwordController,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintStyle: greyFontSytle,
+                  hintStyle: greyFontStyle,
                   hintText: 'Type your password'),
             ),
           ),

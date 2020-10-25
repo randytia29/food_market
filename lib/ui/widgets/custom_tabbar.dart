@@ -36,7 +36,7 @@ class CustomTabBar extends StatelessWidget {
                               style: (titles.indexOf(e) == selectedIndex)
                                   ? blackFontStyle3.copyWith(
                                       fontWeight: FontWeight.w500)
-                                  : greyFontSytle,
+                                  : greyFontStyle,
                             ),
                           ),
                           Container(

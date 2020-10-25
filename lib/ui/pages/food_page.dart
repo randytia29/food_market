@@ -36,7 +36,7 @@ class _FoodPageState extends State<FoodPage> {
                       Text(
                         "Let's get some foods",
                         style:
-                            greyFontSytle.copyWith(fontWeight: FontWeight.w300),
+                            greyFontStyle.copyWith(fontWeight: FontWeight.w300),
                       )
                     ],
                   ),

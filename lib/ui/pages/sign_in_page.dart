@@ -36,7 +36,7 @@ class _SignInPageState extends State<SignInPage> {
               controller: emailController,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintStyle: greyFontSytle,
+                  hintStyle: greyFontStyle,
                   hintText: 'Type your email address'),
             ),
           ),
@@ -59,7 +59,7 @@ class _SignInPageState extends State<SignInPage> {
               controller: passwordController,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintStyle: greyFontSytle,
+                  hintStyle: greyFontStyle,
                   hintText: 'Type your password'),
             ),
           ),

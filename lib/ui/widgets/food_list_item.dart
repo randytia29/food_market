@@ -35,7 +35,7 @@ class FoodListItem extends StatelessWidget {
                 NumberFormat.currency(
                         symbol: 'IDR ', decimalDigits: 0, locale: 'id-ID')
                     .format(food.price),
-                style: greyFontSytle.copyWith(fontSize: 13),
+                style: greyFontStyle.copyWith(fontSize: 13),
               )
             ],
           ),

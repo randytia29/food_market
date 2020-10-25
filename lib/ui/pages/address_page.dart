@@ -39,7 +39,7 @@ class _AddressPageState extends State<AddressPage> {
               controller: phoneController,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintStyle: greyFontSytle,
+                  hintStyle: greyFontStyle,
                   hintText: 'Type your phone number'),
             ),
           ),
@@ -62,7 +62,7 @@ class _AddressPageState extends State<AddressPage> {
               controller: addressController,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintStyle: greyFontSytle,
+                  hintStyle: greyFontStyle,
                   hintText: 'Type your address'),
             ),
           ),
@@ -85,7 +85,7 @@ class _AddressPageState extends State<AddressPage> {
               controller: houseNumController,
               decoration: InputDecoration(
                   border: InputBorder.none,
-                  hintStyle: greyFontSytle,
+                  hintStyle: greyFontStyle,
                   hintText: 'Type your house number'),
             ),
           ),
