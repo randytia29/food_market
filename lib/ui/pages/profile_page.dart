@@ -14,36 +14,52 @@ class _ProfilePageState extends State<ProfilePage> {
       body: SafeArea(
         child: Column(
           children: [
+            //// Header
             Container(
-              width: 110,
-              height: 110,
-              margin: EdgeInsets.only(top: 26),
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage('assets/photo_border.png')),
+              width: double.infinity,
+              height: 220,
+              margin: EdgeInsets.only(bottom: defaultMargin),
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+              color: Colors.white,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 110,
+                    height: 110,
+                    margin: EdgeInsets.only(bottom: 16),
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage('assets/photo_border.png')),
+                    ),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: NetworkImage(
+                                (context.bloc<UserCubit>().state as UserLoaded)
+                                    .user
+                                    .picturePath),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                  ),
+                  Text(
+                    (context.bloc<UserCubit>().state as UserLoaded).user.name,
+                    style: GoogleFonts.poppins(
+                        fontSize: 18, fontWeight: FontWeight.w500),
+                  ),
+                  Text(
+                      (context.bloc<UserCubit>().state as UserLoaded)
+                          .user
+                          .email,
+                      style:
+                          greyFontStyle.copyWith(fontWeight: FontWeight.w300)),
+                ],
               ),
-              child: Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  image: DecorationImage(
-                      image: NetworkImage(
-                          'https://assets.pikiran-rakyat.com/crop/3x282:688x907/x/photo/2020/10/10/2212111952.png'),
-                      fit: BoxFit.cover),
-                ),
-              ),
             ),
-            SizedBox(
-              height: 16,
-            ),
-            Text('Randytia Akbar'),
-            SizedBox(
-              height: 8,
-            ),
-            Text('randytia.akbar@gmail.com'),
-            SizedBox(
-              height: 24,
-            ),
+            //// Body
             Container(
               width: double.infinity,
               color: Colors.white,
