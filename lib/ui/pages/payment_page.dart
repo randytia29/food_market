@@ -386,7 +386,7 @@ class _PaymentPageState extends State<PaymentPage> {
                       });
 
                       bool result = await context
-                          .bloc<TransactionCubit>()
+                          .read<TransactionCubit>()
                           .submitTransaction(widget.transaction.copyWith(
                               dateTime: DateTime.now(),
                               total: (widget.transaction.total * 1.1).toInt() +
