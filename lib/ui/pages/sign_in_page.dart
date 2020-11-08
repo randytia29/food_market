@@ -78,7 +78,7 @@ class _SignInPageState extends State<SignInPage> {
 
                       await context.read<UserCubit>().signIn(
                           emailController.text, passwordController.text);
-                      UserState state = context.bloc<UserCubit>().state;
+                      UserState state = context.read<UserCubit>().state;
 
                       if (state is UserLoaded) {
                         context.read<FoodCubit>().getFoods();
