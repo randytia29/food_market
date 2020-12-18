@@ -3,9 +3,8 @@ part of 'services.dart';
 class UserServices {
   static Future<ApiReturnValue<User>> signIn(String email, String password,
       {http.Client client}) async {
-    if (client != null) {
-      client = http.Client();
-    }
+    client ??= http.Client();
+
     String url = baseURL + 'login';
     var response = await client.post(url,
         headers: {'Content-Type': 'application/json'},
@@ -22,9 +21,8 @@ class UserServices {
 
   static Future<ApiReturnValue<User>> signUp(User user, String password,
       {File pictureFile, http.Client client}) async {
-    if (client == null) {
-      client = http.Client();
-    }
+    client ??= http.Client();
+
     String url = baseURL + 'register';
     var response = await client.post(url,
         headers: {'Content-Type': 'application/json'},
