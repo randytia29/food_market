@@ -7,7 +7,7 @@ class UserServices {
 
     String url = baseURL + 'login';
 
-    var response = await client.post(url,
+    var response = await client.post(Uri.parse(url),
         headers: {'Content-Type': 'application/json'},
         body:
             jsonEncode(<String, String>{'email': email, 'password': password}));
@@ -30,7 +30,7 @@ class UserServices {
 
     String url = baseURL + 'register';
 
-    var response = await client.post(url,
+    var response = await client.post(Uri.parse(url),
         headers: {'Content-Type': 'application/json'},
         body: jsonEncode(<String, String>{
           'name': user.name,

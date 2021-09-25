@@ -7,7 +7,7 @@ class FoodServices {
 
     String url = baseURL + 'food';
 
-    var response = await client.get(url);
+    var response = await client.get(Uri.parse(url));
 
     if (response.statusCode != 200) {
       return ApiReturnValue(message: 'Please try again');

@@ -44,34 +44,26 @@ class IllustrationPage extends StatelessWidget {
             margin: EdgeInsets.only(top: 30, bottom: 12),
             width: 200,
             height: 45,
-            child: RaisedButton(
-              onPressed: buttonTap1,
-              color: mainColor,
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)),
-              child: Text(
-                buttonTitle1,
-                style: blackFontStyle3.copyWith(fontWeight: FontWeight.w500),
-              ),
-            ),
+            child: FoodMarketButton(
+                child: Text(
+                  buttonTitle1,
+                  style: blackFontStyle3.copyWith(fontWeight: FontWeight.w500),
+                ),
+                onPressed: buttonTap1),
           ),
           (buttonTap2 == null)
               ? SizedBox()
               : SizedBox(
                   width: 200,
                   height: 45,
-                  child: RaisedButton(
-                    onPressed: buttonTap2,
-                    color: greyColor,
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
+                  child: FoodMarketButton(
                     child: Text(
                       buttonTitle2 ?? 'title',
                       style: blackFontStyle3.copyWith(
                           fontWeight: FontWeight.w500, color: Colors.white),
                     ),
+                    onPressed: buttonTap2,
+                    primary: greyColor,
                   ),
                 )
         ],

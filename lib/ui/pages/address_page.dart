@@ -151,7 +151,12 @@ class _AddressPageState extends State<AddressPage> {
                 ? Center(
                     child: loadingIndicator,
                   )
-                : RaisedButton(
+                : FoodMarketButton(
+                    child: Text(
+                      'Sign Up Now',
+                      style: GoogleFonts.poppins(
+                          color: Colors.black, fontWeight: FontWeight.w500),
+                    ),
                     onPressed: () async {
                       User user = widget.user.copyWith(
                           phoneNumber: phoneController.text,
@@ -190,15 +195,6 @@ class _AddressPageState extends State<AddressPage> {
                         });
                       }
                     },
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    color: mainColor,
-                    child: Text(
-                      'Sign Up Now',
-                      style: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.w500),
-                    ),
                   ),
           )
         ],

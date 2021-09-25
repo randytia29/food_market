@@ -72,7 +72,12 @@ class _SignInPageState extends State<SignInPage> {
             padding: EdgeInsets.symmetric(horizontal: defaultMargin),
             child: isLoading
                 ? loadingIndicator
-                : RaisedButton(
+                : FoodMarketButton(
+                    child: Text(
+                      'Sign In',
+                      style: GoogleFonts.poppins(
+                          color: Colors.black, fontWeight: FontWeight.w500),
+                    ),
                     onPressed: () async {
                       setState(() {
                         isLoading = true;
@@ -106,15 +111,6 @@ class _SignInPageState extends State<SignInPage> {
                         });
                       }
                     },
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    color: mainColor,
-                    child: Text(
-                      'Sign In',
-                      style: GoogleFonts.poppins(
-                          color: Colors.black, fontWeight: FontWeight.w500),
-                    ),
                   ),
           ),
           Container(
@@ -124,19 +120,16 @@ class _SignInPageState extends State<SignInPage> {
             padding: EdgeInsets.symmetric(horizontal: defaultMargin),
             child: isLoading
                 ? loadingIndicator
-                : RaisedButton(
-                    onPressed: () {
-                      Get.to(SignUpPage());
-                    },
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    color: greyColor,
+                : FoodMarketButton(
                     child: Text(
                       'Create New Account',
                       style: GoogleFonts.poppins(
                           color: Colors.white, fontWeight: FontWeight.w500),
                     ),
+                    onPressed: () {
+                      Get.to(SignUpPage());
+                    },
+                    primary: greyColor,
                   ),
           )
         ],

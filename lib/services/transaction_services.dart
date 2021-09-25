@@ -7,7 +7,7 @@ class TransactionServices {
 
     String url = baseURL + 'transaction/?limit=1000';
 
-    var response = await client.get(url, headers: {
+    var response = await client.get(Uri.parse(url), headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ${User.token}'
     });
@@ -32,7 +32,7 @@ class TransactionServices {
 
     String url = baseURL + 'checkout';
 
-    var response = await client.post(url,
+    var response = await client.post(Uri.parse(url),
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ${User.token}'

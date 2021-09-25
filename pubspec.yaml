@@ -23,18 +23,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.0
-  equatable: ^1.2.5
-  flutter_bloc: ^6.1.0
-  flutter_spinkit: ^4.1.2+1
-  get: ^3.13.2
-  google_fonts: ^1.1.0
-  http: ^0.12.2
-  image_picker: ^0.6.7+14
-  intl: ^0.16.1
-  material_design_icons_flutter: ^4.0.5755
-  supercharged: ^1.10.0
-  url_launcher: ^5.7.10
+  cupertino_icons: ^1.0.3
+  equatable: ^2.0.3
+  flutter_bloc: ^7.3.0
+  flutter_spinkit: ^5.1.0
+  get: ^4.3.8
+  google_fonts: ^2.1.0
+  http: ^0.13.3
+  image_picker: ^0.8.4+2
+  intl: ^0.17.0
+  material_design_icons_flutter: ^4.0.5955
+  supercharged: ^2.1.1
+  url_launcher: ^6.0.12
 
 dev_dependencies:
   flutter_test:

@@ -379,7 +379,12 @@ class _PaymentPageState extends State<PaymentPage> {
                   margin: EdgeInsets.symmetric(horizontal: defaultMargin),
                   height: 45,
                   width: double.infinity,
-                  child: RaisedButton(
+                  child: FoodMarketButton(
+                    child: Text(
+                      'Checkout Now',
+                      style:
+                          blackFontStyle3.copyWith(fontWeight: FontWeight.w500),
+                    ),
                     onPressed: () async {
                       setState(() {
                         isLoading = true;
@@ -413,15 +418,6 @@ class _PaymentPageState extends State<PaymentPage> {
                                 )));
                       }
                     },
-                    color: mainColor,
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    child: Text(
-                      'Checkout Now',
-                      style:
-                          blackFontStyle3.copyWith(fontWeight: FontWeight.w500),
-                    ),
                   ),
                 )
         ],

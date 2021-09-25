@@ -24,7 +24,7 @@ class _SignUpPageState extends State<SignUpPage> {
           GestureDetector(
             onTap: () async {
               final pickedFile =
-                  await ImagePicker().getImage(source: ImageSource.gallery);
+                  await ImagePicker().pickImage(source: ImageSource.gallery);
               if (pickedFile != null) {
                 pictureFile = File(pickedFile.path);
                 setState(() {});
@@ -133,7 +133,12 @@ class _SignUpPageState extends State<SignUpPage> {
             margin: EdgeInsets.only(top: 24),
             height: 45,
             padding: EdgeInsets.symmetric(horizontal: defaultMargin),
-            child: RaisedButton(
+            child: FoodMarketButton(
+              child: Text(
+                'Continue',
+                style: GoogleFonts.poppins(
+                    color: Colors.black, fontWeight: FontWeight.w500),
+              ),
               onPressed: () {
                 Get.to(AddressPage(
                     User(
@@ -141,15 +146,6 @@ class _SignUpPageState extends State<SignUpPage> {
                     passwordController.text,
                     pictureFile));
               },
-              elevation: 0,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8)),
-              color: mainColor,
-              child: Text(
-                'Continue',
-                style: GoogleFonts.poppins(
-                    color: Colors.black, fontWeight: FontWeight.w500),
-              ),
             ),
           )
         ],
